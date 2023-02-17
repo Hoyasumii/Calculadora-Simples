@@ -100,7 +100,32 @@ main {
     display: flex;
     flex-flow: column nowrap;
     gap: 5px;
-    width: fit-content;
+    width: 60vw;
     padding: 10px;
     align-self: center;
+}
+
+.light-theme #equals {
+    background-color: #42A5F5;
+    color: #F8F9FA;
+}
+
+.light-theme #equals:hover {
+    background-color: #64B5F6;
+}
+
+.light-theme #equals:active {
+    background-color: #90CAF9;
+}
+
+.dark-theme #equals {
+    background-color: #1565C0;
+}
+
+.dark-theme #equals:hover {
+    background-color: #1976D2;
+}
+
+.dark-theme #equals:active {
+    background-color: #1E88E5;
 }
