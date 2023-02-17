@@ -13,6 +13,9 @@ function addNumber(selectedNumber) {
 }
 
 function addToExpression(selectedExpression) {
+    if (newInsertion.innerText.includes(`=`)) {
+        newInsertion.innerText = newInsertion.innerText.slice(1);
+    }
     if (newInsertion.innerText !== ``) {
         let numberWithoutSign = (newInsertion.innerText.includes(`-`)) ? newInsertion.innerText.slice(1) : newInsertion.innerText;
         mathematicalExpression.innerText +=  ` ` + newInsertion.innerText + ` ` + selectedExpression;
