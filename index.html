@@ -5,15 +5,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calculator</title>
-    <link rel="stylesheet" href="./style.css">
-    <script src="./script.js" defer></script>
+    <link rel="stylesheet" href="./wwwroot/styles/essential.css">
+    <link rel="stylesheet" href="./wwwroot/styles/themes.css">
+    <script src="./wwwroot/scripts/script.js" defer></script>
 </head>
 <body id="body" class="dark-theme">
-    <header>
-        <button class="button material-symbols-outlined" id="change-theme">dark_mode</button>
-    </header>
 
-    <main>
+    <main id="main-container">
         <div id="display-container">
             <div id="mathematical-expression"></div>
             <div id="new-insertion"></div>
@@ -40,9 +38,19 @@
             <button class="button" id="float-point">.</button>
             <button class="button" id="equals">=</button>
         </div>
+
+        <!-- 
+            TODO: Corrigir os problemas de divisão com 0! 0/0, n/0 e 0/n
+            TODO: Refazer o CSS pensando na responsividade para as telas de celular.
+         -->
         
     </main>
 
-    <footer></footer>
+    <footer id="footer-container">
+        <span>
+            Made with ❤️ by <a href="http://github.com/Hoyasumii" target="_blank">Alan Reis</a>
+        </span>
+        <button class="button material-symbols-outlined" id="change-theme">dark_mode</button>
+    </footer>
 </body>
 </html>

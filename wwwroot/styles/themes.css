@@ -1,0 +1,72 @@
+
+.button {
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: 0.3s background-color;
+    color: inherit;
+}
+
+.button:hover {
+    cursor: pointer;
+}
+
+.light-theme {
+    background-color: #F8F9FA;
+    color: #212529;
+}
+
+.light-theme .button, .light-theme #display-container {
+    background-color: #E9ECEF;
+    box-shadow: 1px 1px 3px #CED4DA;
+}
+
+.light-theme .button:hover {
+    background-color: #DEE2E6;
+}
+
+.light-theme .button:active {
+    background-color: #CED4DA;
+}
+
+.light-theme #equals {
+    background-color: #42A5F5;
+    color: #F8F9FA;
+}
+
+.light-theme #equals:hover {
+    background-color: #64B5F6;
+}
+
+.light-theme #equals:active {
+    background-color: #90CAF9;
+}
+
+.dark-theme {
+    background-color: #212529;
+    color: #F8F9FA;
+}
+
+.dark-theme .button, .dark-theme #display-container {
+    background-color: #343A40;
+    box-shadow: 1px 1px 3px #1f1f1f;
+}
+
+.dark-theme .button:hover {
+    background-color: #495057;
+}
+
+.dark-theme .button:active {
+    background-color: #6C757D;
+}
+
+.dark-theme #equals {
+    background-color: #1565C0;
+}
+
+.dark-theme #equals:hover {
+    background-color: #1976D2;
+}
+
+.dark-theme #equals:active {
+    background-color: #1E88E5;
+}
