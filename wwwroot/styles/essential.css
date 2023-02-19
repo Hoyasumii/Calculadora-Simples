@@ -26,18 +26,10 @@ body {
     width: 100vw;
 }
 
-#header-container {
-    display: flex;
-    justify-content: flex-end;
-    padding: 10px;
-    width: 100%;
-}
-
 #main-container {
-    width: 60vw;
     display: flex;
     flex-flow: column nowrap;
-    margin-top:7em;
+    margin-top: 7em;
     gap: 5px;
     align-self: center;
 }
@@ -50,7 +42,7 @@ body {
     padding: 5px;
     border-radius: 5px;
     font-size: 1.7em;
-    height: 1.5em;
+    /* height: 1.5em; */
     transition: 0.3s background-color;
 }
 
@@ -88,6 +80,23 @@ body {
 #change-theme {
     justify-self: flex-end;
     align-self: center;
+    min-height: calc(50vh / 7);
+    aspect-ratio: 1/1;
+}
+
+@media (orientation: landscape) {
+    #main-container {
+        width: 50vw;
+    }
+
+    #controller-container {
+        height: 40vh;
+    }
+
+    #display-container {
+        min-height: calc(50vh / 5);
+    }
+
 }
 
 @media (orientation: portrait) {
@@ -103,9 +112,4 @@ body {
         min-height: calc(50vh / 5);
     }
     
-    #change-theme {
-        min-height: calc(50vh / 7);
-        aspect-ratio: 1/1;
-    }
-
 }

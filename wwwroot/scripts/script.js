@@ -3,7 +3,7 @@ let newInsertion = document.getElementById(`new-insertion`)
 
 function detectEquals() {
     if (newInsertion.innerText.includes(`=`)) {
-        newInsertion.innerText = ``;
+        newInsertion.innerText = newInsertion.innerText.slice(2);
     }
 }
 
@@ -29,7 +29,14 @@ function execute() {
         let expression = mathematicalExpression.innerText.concat(newInsertion.innerText);
         expression = expression.replace(`--`, `+`);
 
-        newInsertion.innerText = `= ` + eval(expression);
+        let result = eval(expression);
+
+        
+        if (isNaN(result) || result == `Infinity`) {
+            result = `undefined`;
+        }
+
+        newInsertion.innerText = `= ` + result;
         mathematicalExpression.innerText = ``;
     }
 }
@@ -76,7 +83,15 @@ let listOfOperations = document.getElementsByClassName(`operation`);
 
 for (let index = 0; index < listOfOperations.length; index++) {
     let currentItem = listOfOperations[index];
-    currentItem.addEventListener(`click`, () => addToExpression(currentItem.innerHTML));
+    currentItem.addEventListener(`click`, function () {
+        
+        if (newInsertion.innerText.includes(`undefined`)) {
+            newInsertion.innerText = ``;
+        }
+
+        addToExpression(currentItem.innerHTML);
+
+    });
 }
 
 document.getElementById(`equals`).addEventListener(`click`, execute);
